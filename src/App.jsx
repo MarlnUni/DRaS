@@ -46,7 +46,7 @@ function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <RouterComponent>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/unauthorized" element={<Unauthorized />} />
@@ -94,7 +94,7 @@ function App() {
               <Route path="/student/courses/:courseId/video/:week" element={<CourseVideoViewer />} />
             </Route>
           </Routes>
-        </RouterComponent>
+        </HashRouter>
       </AuthProvider>
     </ThemeProvider>
   );
