@@ -31,13 +31,13 @@ const adminMenuItems = [
   { id: 'instructors', label: 'Instructor Management', icon: UserCircle, path: '/admin/instructors' },
   { id: 'programs', label: 'Program Management', icon: BookOpen, path: '/admin/programs' },
   // { id: 'departments', label: 'Depart. Management', icon: Building2, path: '/admin/departments' },
-  { id: 'courses', label: 'Course Management', icon: GraduationCap, path: '/admin/courses' },
-  { id: 'documents', label: 'Document Management', icon: FileText, path: '/admin/documents' },
+  // { id: 'courses', label: 'Course Management', icon: GraduationCap, path: '/admin/courses' },
+  // { id: 'documents', label: 'Document Management', icon: FileText, path: '/admin/documents' },
   { id: 'calendar', label: 'Training Calendar', icon: Calendar, path: '/admin/calendar' },
   { id: 'notifications', label: 'Notifications/Queries', icon: Bell, path: '/admin/notifications' },
-  { id: 'reports', label: 'Reports & Analytics', icon: BarChart3, path: '/admin/reports' },
+  // { id: 'reports', label: 'Reports & Analytics', icon: BarChart3, path: '/admin/reports' },
   { id: 'users', label: 'User Management', icon: Users2, path: '/admin/users' },
-  { id: 'settings', label: 'System Settings', icon: Settings, path: '/admin/settings' },
+  // { id: 'settings', label: 'System Settings', icon: Settings, path: '/admin/settings' },
 ];
 
 const instructorMenuItems = [

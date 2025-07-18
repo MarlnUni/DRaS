@@ -3,7 +3,7 @@ export const instructors = [
     id: 1,
     name: 'Dr. Alice Verma',
     email: 'alice.verma@uni.com',
-    department: 'Mechanical Engineering',
+    department: 'AIML',
     assignedCourses: [
       { course: 'Thermodynamics', program: 'B.Tech Mechanical Engineering', start: '2024-01-01', end: '2024-05-31' },
       { course: 'Fluid Mechanics', program: 'B.Tech Mechanical Engineering', start: '2024-01-01', end: '2024-05-31' }
@@ -15,7 +15,7 @@ export const instructors = [
     id: 2,
     name: 'Prof. Rajesh Kumar',
     email: 'rajesh.kumar@uni.com',
-    department: 'Computer Applications',
+    department: 'AIML',
     assignedCourses: [
       { course: 'Data Structures', program: 'B.Tech Computer Applications', start: '2024-01-01', end: '2024-05-31' },
       { course: 'Algorithms', program: 'B.Tech Computer Applications', start: '2024-01-01', end: '2024-05-31' }
@@ -27,7 +27,7 @@ export const instructors = [
     id: 3,
     name: 'Dr. Sunita Sharma',
     email: 'sunita.sharma@uni.com',
-    department: 'Agriculture',
+    department: 'AIML',
     assignedCourses: [
       { course: 'Soil Science', program: 'B.Agri', start: '2024-01-01', end: '2024-05-31' }
     ],
