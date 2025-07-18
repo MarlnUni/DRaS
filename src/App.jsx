@@ -39,64 +39,85 @@ import CoursePdfViewer from './pages/student/CoursePdfViewer.jsx';
 import CourseVideoViewer from './pages/student/CourseVideoViewer.jsx';
 import Ecollab from './pages/student/Ecollab.jsx';
 import { ThemeProvider } from './context/ThemeContext.jsx';
+import AccessibilityBar from './components/AccessibilityBar';
+import { useState, useEffect } from 'react';
 
 const RouterComponent = process.env.NODE_ENV === 'production' ? HashRouter : BrowserRouter;
 
 function App() {
+  const [showAccessBar, setShowAccessBar] = useState(() => {
+    const stored = localStorage.getItem('access-bar-enabled');
+    return stored === null ? true : stored === 'true';
+  });
+  useEffect(() => {
+    const handler = () => {
+      const stored = localStorage.getItem('access-bar-enabled');
+      setShowAccessBar(stored === null ? true : stored === 'true');
+    };
+    window.addEventListener('storage', handler);
+    window.addEventListener('access-bar-toggle', handler);
+    return () => {
+      window.removeEventListener('storage', handler);
+      window.removeEventListener('access-bar-toggle', handler);
+    };
+  }, []);
   return (
-    <ThemeProvider>
-      <AuthProvider>
-        <HashRouter>
-          <Routes>
-            <Route path="/" element={<LoginPage />} />
-            <Route path="/unauthorized" element={<Unauthorized />} />
+    <>
+      {showAccessBar && <AccessibilityBar />}
+      <ThemeProvider>
+        <AuthProvider>
+          <HashRouter>
+            <Routes>
+              <Route path="/" element={<LoginPage />} />
+              <Route path="/unauthorized" element={<Unauthorized />} />
 
-            {/* Protected Routes */}
-            <Route element={<PrivateRoute allowedRoles={['admin']} />}>
-              <Route path="/admin/dashboard" element={<AdminDashboard />} />
-              <Route path="/admin/students" element={<StudentsManagement />} />
-              <Route path="/admin/programs" element={<ProgramManagement />} />
-              <Route path="/admin/instructors" element={<InstructorManagement />} />
-              <Route path="/admin/courses" element={<CourseManagement />} />
-              <Route path="/admin/documents" element={<DocumentManagement />} />
-              <Route path="/admin/calendar" element={<AcademicCalendar />} />
-              <Route path="/admin/notifications" element={<Notifications />} />
-              <Route path="/admin/reports" element={<Reports />} />
-              <Route path="/admin/users" element={<UserManagement />} />
-              <Route path="/admin/settings" element={<SystemSettings />} />
-              <Route path="/admin/profile" element={<Profile />} />
-              <Route path="/admin/departments" element={<DepartmentDashboard />} />
-            </Route>
-            <Route element={<PrivateRoute allowedRoles={['instructor']} />}>
-              <Route path="/instructor/dashboard" element={<InstructorDashboard />} />
-              <Route path="/instructor/profile" element={<InstructorProfile />} />
-              <Route path="/instructor/courses" element={<MyCourses />} />
-              <Route path="/instructor/students" element={<InstructorStudentsManagement />} />
-              <Route path="/instructor/assignments" element={<Assignments />} />
-              <Route path="/instructor/grades" element={<Grades />} />
-              <Route path="/instructor/calendar" element={<TeachingSchedule />} />
-              <Route path="/instructor/materials" element={<CourseMaterials />} />
-              <Route path="/instructor/messages" element={<InstructorStudentMessages />} />
-              <Route path="/instructor/notifications" element={<NotificationsInstructor />} />
-            </Route>
-            <Route element={<PrivateRoute allowedRoles={['student']} />}>
-              <Route path="/student/dashboard" element={<StudentDashboard />} />
-              <Route path="/student/profile" element={<StudentProfile />} />
-              <Route path="/student/courses" element={<StudentCourses />} />
-              <Route path="/student/assignments" element={<StudentAssignments />} />
-              <Route path="/student/grades" element={<StudentGrades />} />
-              <Route path="/student/schedule" element={<StudentSchedule />} />
-              <Route path="/student/materials" element={<StudentMaterials />} />
-              <Route path="/student/messages" element={<StudentMessages />} />
-              <Route path="/student/notifications" element={<StudentNotifications />} />
-              <Route path="/student/ecollab" element={<Ecollab />} />
-              <Route path="/student/courses/:courseId/pdf/:week" element={<CoursePdfViewer />} />
-              <Route path="/student/courses/:courseId/video/:week" element={<CourseVideoViewer />} />
-            </Route>
-          </Routes>
-        </HashRouter>
-      </AuthProvider>
-    </ThemeProvider>
+              {/* Protected Routes */}
+              <Route element={<PrivateRoute allowedRoles={['admin']} />}>
+                <Route path="/admin/dashboard" element={<AdminDashboard />} />
+                <Route path="/admin/students" element={<StudentsManagement />} />
+                <Route path="/admin/programs" element={<ProgramManagement />} />
+                <Route path="/admin/instructors" element={<InstructorManagement />} />
+                <Route path="/admin/courses" element={<CourseManagement />} />
+                <Route path="/admin/documents" element={<DocumentManagement />} />
+                <Route path="/admin/calendar" element={<AcademicCalendar />} />
+                <Route path="/admin/notifications" element={<Notifications />} />
+                <Route path="/admin/reports" element={<Reports />} />
+                <Route path="/admin/users" element={<UserManagement />} />
+                <Route path="/admin/settings" element={<SystemSettings />} />
+                <Route path="/admin/profile" element={<Profile />} />
+                <Route path="/admin/departments" element={<DepartmentDashboard />} />
+              </Route>
+              <Route element={<PrivateRoute allowedRoles={['instructor']} />}>
+                <Route path="/instructor/dashboard" element={<InstructorDashboard />} />
+                <Route path="/instructor/profile" element={<InstructorProfile />} />
+                <Route path="/instructor/courses" element={<MyCourses />} />
+                <Route path="/instructor/students" element={<InstructorStudentsManagement />} />
+                <Route path="/instructor/assignments" element={<Assignments />} />
+                <Route path="/instructor/grades" element={<Grades />} />
+                <Route path="/instructor/calendar" element={<TeachingSchedule />} />
+                <Route path="/instructor/materials" element={<CourseMaterials />} />
+                <Route path="/instructor/messages" element={<InstructorStudentMessages />} />
+                <Route path="/instructor/notifications" element={<NotificationsInstructor />} />
+              </Route>
+              <Route element={<PrivateRoute allowedRoles={['student']} />}>
+                <Route path="/student/dashboard" element={<StudentDashboard />} />
+                <Route path="/student/profile" element={<StudentProfile />} />
+                <Route path="/student/courses" element={<StudentCourses />} />
+                <Route path="/student/assignments" element={<StudentAssignments />} />
+                <Route path="/student/grades" element={<StudentGrades />} />
+                <Route path="/student/schedule" element={<StudentSchedule />} />
+                <Route path="/student/materials" element={<StudentMaterials />} />
+                <Route path="/student/messages" element={<StudentMessages />} />
+                <Route path="/student/notifications" element={<StudentNotifications />} />
+                <Route path="/student/ecollab" element={<Ecollab />} />
+                <Route path="/student/courses/:courseId/pdf/:week" element={<CoursePdfViewer />} />
+                <Route path="/student/courses/:courseId/video/:week" element={<CourseVideoViewer />} />
+              </Route>
+            </Routes>
+          </HashRouter>
+        </AuthProvider>
+      </ThemeProvider>
+    </>
   );
 }
 
