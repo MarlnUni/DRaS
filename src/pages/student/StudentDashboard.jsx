@@ -1,60 +1,58 @@
 import { useState, useEffect } from 'react';
 import Sidebar from '../../components/Sidebar';
-import { BookOpen, Users2, ClipboardList, Calendar, BarChart2, MessageCircle, FileText, CheckCircle, TrendingUp, Bell, Award, Library, Clock, AlertCircle } from 'lucide-react';
+import { BookOpen, Users2, ClipboardList, Calendar, BarChart2, MessageCircle, FileText, CheckCircle, TrendingUp, Bell, Award, Library, Clock, AlertCircle, Shield, Target, Zap } from 'lucide-react';
 
 const stats = [
-  { label: 'Enrolled Courses', value: '5', icon: BookOpen, color: 'text-blue-600', bg: 'bg-blue-50' },
-  { label: 'Pending Assignments', value: '3', icon: ClipboardList, color: 'text-yellow-600', bg: 'bg-yellow-50' },
-  { label: 'Average Grade', value: '85%', icon: Award, color: 'text-green-600', bg: 'bg-green-50' },
-  { label: 'Next Class', value: 'Math 101', icon: Calendar, color: 'text-purple-600', bg: 'bg-purple-50' },
+  { label: 'Enrolled Courses', value: '2', icon: BookOpen, color: 'text-blue-600', bg: 'bg-blue-50' },
+  { label: 'Pending Assessments', value: '4', icon: ClipboardList, color: 'text-yellow-600', bg: 'bg-yellow-50' },
+  { label: 'Training Progress', value: '78%', icon: Award, color: 'text-green-600', bg: 'bg-green-50' },
+  { label: 'Next Training', value: 'AI Defence Lab', icon: Calendar, color: 'text-purple-600', bg: 'bg-purple-50' },
 ];
 
 const messages = [
-  { name: 'Dr. Emily Carter', time: '10:15 AM', msg: 'Your assignment has been graded. Great work!', avatar: '', color: 'bg-blue-200' },
-  { name: 'Study Group', time: 'Yesterday', msg: 'Meeting tomorrow at 2 PM in Library', avatar: '', color: 'bg-green-200' },
-  { name: 'Academic Advisor', time: '2 days ago', msg: 'Course registration opens next week', avatar: '', color: 'bg-yellow-200' },
+  { name: 'Instructor Alex Chen', time: '10:15 AM', msg: 'Your AI threat detection assessment is ready for review', avatar: '', color: 'bg-blue-200' },
+  { name: 'Training Coordinator', time: 'Yesterday', msg: 'UAV simulation session scheduled for tomorrow', avatar: '', color: 'bg-green-200' },
+  { name: 'Defence Program Manager', time: '2 days ago', msg: 'Industry certification exam dates announced', avatar: '', color: 'bg-yellow-200' },
 ];
 
 const activities = [
-  { icon: CheckCircle, desc: 'Submitted Math Assignment #3', time: '2 hours ago', color: 'text-blue-600' },
-  { icon: Award, desc: 'Received A+ in Physics Lab', time: '1 day ago', color: 'text-green-600' },
-  { icon: FileText, desc: 'Downloaded Chemistry Notes', time: '2 days ago', color: 'text-yellow-600' },
-  { icon: Users2, desc: 'Joined Study Group', time: '3 days ago', color: 'text-purple-600' },
+  { icon: CheckCircle, desc: 'Completed AI Defence Systems practical assessment', time: '2 hours ago', color: 'text-blue-600' },
+  { icon: Award, desc: 'Achieved 92% in Autonomous Navigation module', time: '1 day ago', color: 'text-green-600' },
+  { icon: FileText, desc: 'Downloaded UAV system design guidelines', time: '2 days ago', color: 'text-yellow-600' },
+  { icon: Users2, desc: 'Joined Defence Technology study group', time: '3 days ago', color: 'text-purple-600' },
 ];
 
 const upcomingClasses = [
-  { time: '9:00 AM', title: 'Mathematics 101', room: 'Room 302, Building A', instructor: 'Dr. Emily Carter' },
-  { time: '1:00 PM', title: 'Physics 201', room: 'Room 105, Building B', instructor: 'Prof. David Kim' },
-  { time: '3:30 PM', title: 'Chemistry Lab', room: 'Lab 203, Science Building', instructor: 'Dr. Sarah Lee' },
+  { time: '9:00 AM', title: 'AI401 - AI Defence Lab Session', room: 'Defence Lab 1, Building A', instructor: 'Instructor Chen' },
+  { time: '1:00 PM', title: 'AP402 - UAV Flight Simulation', room: 'Simulation Center, Building B', instructor: 'Instructor Rodriguez' },
+  { time: '3:30 PM', title: 'Industry Standards Review', room: 'Conference Room 203', instructor: 'Program Manager' },
 ];
 
 const courseProgress = [
-  { name: 'Mathematics 101', progress: 75, color: 'bg-blue-500' },
-  { name: 'Physics 201', progress: 60, color: 'bg-green-500' },
-  { name: 'Chemistry 101', progress: 85, color: 'bg-yellow-500' },
-  { name: 'Computer Science 101', progress: 90, color: 'bg-purple-500' },
+  { name: 'AI401 - Artificial Intelligence for Defence Applications', progress: 75, color: 'bg-blue-500' },
+  { name: 'AP402 - Autonomous Platforms in Defence Applications', progress: 68, color: 'bg-green-500' },
 ];
 
 const upcomingAssignments = [
   {
-    course: 'Mathematics 101',
-    title: 'Linear Algebra Assignment',
+    course: 'AI401 - AI Defence Applications',
+    title: 'AI Threat Detection Practical Assessment',
     dueDate: '2024-03-20',
     daysLeft: 3,
     status: 'pending',
     priority: 'high'
   },
   {
-    course: 'Physics 201',
-    title: 'Lab Report: Wave Motion',
+    course: 'AP402 - Autonomous Platforms',
+    title: 'UAV System Design Project',
     dueDate: '2024-03-22',
     daysLeft: 5,
     status: 'in-progress',
     priority: 'medium'
   },
   {
-    course: 'Chemistry 101',
-    title: 'Chemical Reactions Quiz',
+    course: 'AI401 - AI Defence Applications',
+    title: 'Computer Vision Defence Applications',
     dueDate: '2024-03-25',
     daysLeft: 8,
     status: 'not-started',
@@ -63,31 +61,31 @@ const upcomingAssignments = [
 ];
 
 const studyProgress = [
-  { label: 'Attendance Rate', value: '92%', icon: Users2, trend: '+2.5%' },
-  { label: 'Study Hours', value: '24h', icon: Clock, trend: '+5h' },
-  { label: 'Completed Tasks', value: '18/20', icon: CheckCircle, trend: '+3' },
-  { label: 'Current GPA', value: '3.8', icon: Award, trend: '+0.2' }
+  { label: 'Attendance Rate', value: '94%', icon: Users2, trend: '+3.2%' },
+  { label: 'Training Hours', value: '156h', icon: Clock, trend: '+12h' },
+  { label: 'Completed Modules', value: '28/34', icon: CheckCircle, trend: '+4' },
+  { label: 'Skill Mastery', value: '87%', icon: Award, trend: '+5%' }
 ];
 
 const quickActions = [
-  { label: 'Submit Assignment', icon: FileText, color: 'blue' },
-  { label: 'Join Study Group', icon: Users2, color: 'purple' },
-  { label: 'Book Library Slot', icon: Library, color: 'green' },
-  { label: 'Schedule Meeting', icon: Calendar, color: 'yellow' }
+  { label: 'Submit Assessment', icon: FileText, color: 'blue' },
+  { label: 'Join Training Group', icon: Users2, color: 'purple' },
+  { label: 'Book Lab Session', icon: Library, color: 'green' },
+  { label: 'Schedule Practice', icon: Calendar, color: 'yellow' }
 ];
 
 const upcomingDeadlines = [
   { 
-    type: 'Assignment',
-    course: 'Mathematics 101',
-    title: 'Linear Algebra Quiz',
+    type: 'Assessment',
+    course: 'AI401 - AI Defence Applications',
+    title: 'AI Threat Detection Practical',
     deadline: '2024-03-22',
     priority: 'high'
   },
   {
     type: 'Project',
-    course: 'Computer Science',
-    title: 'Database Design',
+    course: 'AP402 - Autonomous Platforms',
+    title: 'UAV System Design',
     deadline: '2024-03-25',
     priority: 'medium'
   }
@@ -201,13 +199,13 @@ export default function StudentDashboard() {
                   <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg cursor-pointer">
                     <div className="flex items-center gap-2">
                       <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${
-                        assignment.course.includes('Mathematics') ? 'bg-blue-50 dark:bg-blue-900' :
-                        assignment.course.includes('Physics') ? 'bg-purple-50 dark:bg-purple-900' :
+                        assignment.course.includes('AI401') ? 'bg-blue-50 dark:bg-blue-900' :
+                        assignment.course.includes('AP402') ? 'bg-purple-50 dark:bg-purple-900' :
                         'bg-green-50 dark:bg-green-900'
                       }`}>
                         <span className={`text-sm font-medium ${
-                          assignment.course.includes('Mathematics') ? 'text-blue-600 dark:text-blue-300' :
-                          assignment.course.includes('Physics') ? 'text-purple-600 dark:text-purple-300' :
+                          assignment.course.includes('AI401') ? 'text-blue-600 dark:text-blue-300' :
+                          assignment.course.includes('AP402') ? 'text-purple-600 dark:text-purple-300' :
                           'text-green-600 dark:text-green-300'
                         }`}>
                           {assignment.course.split(' ')[0][0]}

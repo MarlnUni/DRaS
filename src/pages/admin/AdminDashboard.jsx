@@ -1,54 +1,54 @@
 import { useState } from 'react';
 import Sidebar from '../../components/Sidebar';
-import { Users2, UserCircle, BookOpen, Award, BarChart2, DollarSign, MessageCircle, Calendar, Bell, TrendingUp, PieChart, CheckCircle, Clock, FileText, ArrowUpRight } from 'lucide-react';
+import { Users2, UserCircle, BookOpen, Award, BarChart2, DollarSign, MessageCircle, Calendar, Bell, TrendingUp, PieChart, CheckCircle, Clock, FileText, ArrowUpRight, Shield, Target, Zap } from 'lucide-react';
 
 const stats = [
-  { label: 'Students', value: '5,699', icon: Users2, color: 'text-blue-600', bg: 'bg-blue-50' },
-  { label: 'Instructors', value: '297', icon: UserCircle, color: 'text-green-600', bg: 'bg-green-50' },
-  { label: 'Programs', value: '24', icon: BookOpen, color: 'text-purple-600', bg: 'bg-purple-50' },
-  { label: 'Revenue', value: '$87,395', icon: DollarSign, color: 'text-yellow-600', bg: 'bg-yellow-50' },
+  { label: 'Trainees', value: '77', icon: Users2, color: 'text-blue-600', bg: 'bg-blue-50' },
+  { label: 'Instructors', value: '4', icon: UserCircle, color: 'text-green-600', bg: 'bg-green-50' },
+  { label: 'Defence Programs', value: '2', icon: BookOpen, color: 'text-purple-600', bg: 'bg-purple-50' },
+  { label: 'Training Revenue', value: '$124,500', icon: DollarSign, color: 'text-yellow-600', bg: 'bg-yellow-50' },
 ];
 
 const messages = [
-  { name: 'Susan Grey', time: '2:00 PM', msg: 'Reminder: Department meeting this Friday.', avatar: '', color: 'bg-blue-200' },
-  { name: 'Jordan Kim', time: '12:45 PM', msg: 'Issue accessing the online library resources.', avatar: '', color: 'bg-green-200' },
-  { name: 'Dean Richard Neal', time: '10:30 AM', msg: 'Great start, please join the orientation.', avatar: '', color: 'bg-yellow-200' },
-  { name: 'Campus Health Center', time: '7:45 AM', msg: 'Flu vaccinations available next week.', avatar: '', color: 'bg-purple-200' },
+  { name: 'Training Director', time: '2:00 PM', msg: 'Defence industry certification exam dates finalized.', avatar: '', color: 'bg-blue-200' },
+  { name: 'Instructor Chen', time: '12:45 PM', msg: 'AI Defence Lab equipment maintenance scheduled.', avatar: '', color: 'bg-green-200' },
+  { name: 'Program Manager', time: '10:30 AM', msg: 'Industry expert guest lecture confirmed for next week.', avatar: '', color: 'bg-yellow-200' },
+  { name: 'Defence Coordinator', time: '7:45 AM', msg: 'UAV simulation center upgrades completed.', avatar: '', color: 'bg-purple-200' },
 ];
 
 const activities = [
-  { icon: CheckCircle, desc: 'Student Sarah Thompson registered for Advanced Calculus.', time: '2 min ago', color: 'text-blue-600' },
-  { icon: Award, desc: 'Professor Mark Collins submitted final grades for Spring.', time: '10 min ago', color: 'text-green-600' },
-  { icon: Bell, desc: 'Student Lisa Ray created a support ticket.', time: '30 min ago', color: 'text-yellow-600' },
-  { icon: FileText, desc: 'IT administrator updated the profile information.', time: '1 hr ago', color: 'text-purple-600' },
-  { icon: Users2, desc: 'Student Jason Lee downloaded the Biochemistry syllabus.', time: '2 hr ago', color: 'text-blue-600' },
+  { icon: CheckCircle, desc: 'Trainee Alex registered for AI401 Defence Applications.', time: '2 min ago', color: 'text-blue-600' },
+  { icon: Award, desc: 'Instructor Rodriguez submitted assessment grades for AP402.', time: '10 min ago', color: 'text-green-600' },
+  { icon: Bell, desc: 'Trainee Maria created a support ticket for lab access.', time: '30 min ago', color: 'text-yellow-600' },
+  { icon: FileText, desc: 'IT administrator updated defence training protocols.', time: '1 hr ago', color: 'text-purple-600' },
+  { icon: Users2, desc: 'Trainee James downloaded UAV system design guidelines.', time: '2 hr ago', color: 'text-blue-600' },
 ];
 
 const noticeBoard = [
-  { title: 'Internship Opportunities', desc: 'Applications open for summer internships. Visit Career Services to apply.', date: 'Oct 10, 2024', by: 'Career Services Center', views: 1510 },
-  { title: 'New Library Resources', desc: 'Explore new additions to library collections, including journals & e-books.', date: 'Oct 8, 2024', by: 'University Library', views: 725 },
-  { title: 'Lecture Series Announcement', desc: 'Guest lecture on Artificial Intelligence this Friday.', date: 'Oct 5, 2024', by: 'Academic Affairs Office', views: 871 },
-  { title: 'University Charity Ball', desc: 'Join us for the annual charity ball. Tickets available now.', date: 'Oct 3, 2024', by: 'Student Union', views: 633 },
+  { title: 'Defence Industry Certification', desc: 'Final certification exams scheduled for next month. All trainees must register.', date: 'Oct 10, 2024', by: 'Training Director', views: 45 },
+  { title: 'Practical Assessment Week', desc: 'Hands-on assessments for both defence courses this week.', date: 'Oct 8, 2024', by: 'Training Coordinator', views: 38 },
+  { title: 'Industry Expert Guest Lecture', desc: 'Retired military officer to speak on real-world defence applications.', date: 'Oct 5, 2024', by: 'Program Manager', views: 42 },
+  { title: 'Defence Technology Showcase', desc: 'Annual showcase of autonomous platforms and AI defence systems.', date: 'Oct 3, 2024', by: 'Defence Coordinator', views: 35 },
 ];
 
-const studentDistribution = [
-  { year: 2020, value: 1200, color: 'fill-blue-500' },
-  { year: 2021, value: 1250, color: 'fill-green-500' },
-  { year: 2022, value: 1300, color: 'fill-yellow-500' },
-  { year: 2023, value: 1350, color: 'fill-purple-500' },
+const traineeDistribution = [
+  { year: 2022, value: 45, color: 'fill-blue-500' },
+  { year: 2023, value: 52, color: 'fill-green-500' },
+  { year: 2024, value: 77, color: 'fill-yellow-500' },
+  { year: 2025, value: 89, color: 'fill-purple-500' },
 ];
 
-const studentActivity = [
-  { label: 'Annual Math Olympiad', desc: 'Gold Medalist', days: '2 days ago', icon: Award },
-  { label: 'Engineering Project Showcase', desc: 'Best Innovation Award', days: '5 days ago', icon: TrendingUp },
-  { label: 'Volunteer Day', desc: 'Lead Organizer', days: '9 days ago', icon: Users2 },
-  { label: 'Debate Club Championship', desc: '2nd Place', days: '12 days ago', icon: CheckCircle },
+const traineeActivity = [
+  { label: 'AI Defence Systems Competition', desc: '1st Place Winner', days: '2 days ago', icon: Award },
+  { label: 'Autonomous Platform Design', desc: 'Best Innovation Award', days: '5 days ago', icon: TrendingUp },
+  { label: 'Defence Technology Workshop', desc: 'Lead Organizer', days: '9 days ago', icon: Users2 },
+  { label: 'UAV Flight Simulation', desc: 'Perfect Score', days: '12 days ago', icon: CheckCircle },
 ];
 
 const calendarEvents = [
-  { time: '9:00 AM', title: 'Career Development Workshop', desc: 'Business and Technology', audience: 'Third and Fourth-year Students' },
-  { time: '1:00 PM', title: 'Guest Lecture Series', desc: 'Humanities and Social Sciences', audience: 'All Students' },
-  { time: '7:00 PM', title: 'Movie Night Under the Stars', desc: 'Hosted by University Film Club', audience: 'All Classes' },
+  { time: '9:00 AM', title: 'AI Defence Lab Session', desc: 'Practical AI threat detection training', audience: 'AI401 Trainees' },
+  { time: '1:00 PM', title: 'UAV Flight Simulation', desc: 'Autonomous platform control training', audience: 'AP402 Trainees' },
+  { time: '7:00 PM', title: 'Defence Industry Networking', desc: 'Hosted by Defence Technology Club', audience: 'All Trainees' },
 ];
 
 export default function AdminDashboard() {
@@ -75,13 +75,13 @@ export default function AdminDashboard() {
 
             {/* Charts Row */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Academic Performance (Line Chart) */}
+              {/* Training Performance (Line Chart) */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <div className="font-semibold text-gray-700 dark:text-gray-100">Academic Performance</div>
+                  <div className="font-semibold text-gray-700 dark:text-gray-100">Training Performance</div>
                   <select className="border rounded px-2 py-1 text-sm dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700">
-                    <option>Last 4 Year</option>
-                    <option>Last 2 Year</option>
+                    <option>Last 4 Years</option>
+                    <option>Last 2 Years</option>
                   </select>
                 </div>
                 {/* Mock Line Chart */}
@@ -93,15 +93,15 @@ export default function AdminDashboard() {
                     points="0,80 40,70 80,60 120,50 160,40 200,45 240,55 280,60 320,50"
                   />
                   <circle cx="160" cy="40" r="6" fill="#2563eb" />
-                  <text x="170" y="38" fontSize="12" fill="#2563eb">70%</text>
+                  <text x="170" y="38" fontSize="12" fill="#2563eb">87%</text>
                 </svg>
               </div>
-              {/* Earnings (Bar Chart) */}
+              {/* Training Revenue (Bar Chart) */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <div className="font-semibold text-gray-700 dark:text-gray-100">Earnings</div>
+                  <div className="font-semibold text-gray-700 dark:text-gray-100">Training Revenue</div>
                   <select className="border rounded px-2 py-1 text-sm dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700">
-                    <option>Last Semester</option>
+                    <option>Last Quarter</option>
                     <option>This Year</option>
                   </select>
                 </div>
@@ -140,7 +140,7 @@ export default function AdminDashboard() {
               </div>
               {/* Student Distribution (Pie/Donut) */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col items-center justify-center">
-                <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><PieChart size={18}/> Students</div>
+                <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><PieChart size={18}/> Trainees</div>
                 {/* Mock Donut Chart */}
                 <svg viewBox="0 0 120 120" width="100" height="100">
                   <circle r="50" cx="60" cy="60" fill="#e5e7eb" />
@@ -149,23 +149,23 @@ export default function AdminDashboard() {
                   <path d="M60 60 L25.24 97.55 A50 50 0 0 1 11.22 34.55 Z" className="fill-yellow-500" />
                   <path d="M60 60 L11.22 34.55 A50 50 0 0 1 60 10 Z" className="fill-purple-500" />
                 </svg>
-                <div className="text-2xl font-bold text-gray-800 dark:text-gray-100 mt-2">5,100</div>
-                <div className="text-xs text-gray-500 dark:text-gray-300">Total Students</div>
+                <div className="text-2xl font-bold text-gray-800 dark:text-gray-100 mt-2">77</div>
+                <div className="text-xs text-gray-500 dark:text-gray-300">Total Trainees</div>
                 <div className="flex flex-col gap-1 mt-2 w-full">
-                  {studentDistribution.map((s) => (
+                  {traineeDistribution.map((s) => (
                     <div key={s.year} className="flex items-center gap-2 text-xs">
                       <span className={`inline-block w-3 h-3 rounded-full ${s.color}`}></span>
                       <span className="font-semibold">{s.year}</span>
-                      <span className="ml-auto">{s.value} students</span>
+                      <span className="ml-auto">{s.value} trainees</span>
                     </div>
                   ))}
                 </div>
               </div>
-              {/* Student Activity */}
+              {/* Trainee Activity */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col">
-                <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><BarChart2 size={18}/> Student Activity</div>
+                <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><BarChart2 size={18}/> Trainee Activity</div>
                 <div className="flex flex-col gap-3">
-                  {studentActivity.map((a, i) => (
+                  {traineeActivity.map((a, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <a.icon size={22} className="text-blue-600" />
                       <div className="flex-1">

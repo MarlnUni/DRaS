@@ -15,45 +15,33 @@ import {
 const courses = [
   {
     id: 1,
-    name: 'Introduction to Computer Science',
-    code: 'CS101',
-    instructor: 'Dr. Sarah Johnson',
-    grade: 85,
+    name: 'AI401 - Artificial Intelligence for Defence Applications',
+    code: 'AI401',
+    instructor: 'Instructor Alex Chen',
+    grade: 87,
     assignments: [
-      { name: 'Programming Assignment #1', grade: 90, maxPoints: 100, weight: 20 },
-      { name: 'Midterm Exam', grade: 85, maxPoints: 100, weight: 30 },
-      { name: 'Final Project', grade: 80, maxPoints: 100, weight: 50 },
+      { name: 'AI Threat Detection Practical Assessment', grade: 92, maxPoints: 150, weight: 25 },
+      { name: 'Computer Vision Defence Applications', grade: 85, maxPoints: 200, weight: 30 },
+      { name: 'AI Defence Systems Analysis Project', grade: 88, maxPoints: 150, weight: 25 },
+      { name: 'Machine Learning for Threat Detection', grade: 90, maxPoints: 100, weight: 20 },
     ],
     trend: 'up',
-    semester: 'Spring 2024',
+    semester: 'Fall 2024',
   },
   {
     id: 2,
-    name: 'Data Structures and Algorithms',
-    code: 'CS201',
-    instructor: 'Prof. Michael Chen',
-    grade: 92,
+    name: 'AP402 - Autonomous Platforms in Defence Applications',
+    code: 'AP402',
+    instructor: 'Instructor Maria Rodriguez',
+    grade: 82,
     assignments: [
-      { name: 'Linked List Implementation', grade: 95, maxPoints: 100, weight: 25 },
-      { name: 'Tree Traversal Project', grade: 90, maxPoints: 100, weight: 25 },
-      { name: 'Final Exam', grade: 90, maxPoints: 100, weight: 50 },
+      { name: 'UAV System Design Project', grade: 88, maxPoints: 250, weight: 30 },
+      { name: 'Autonomous Navigation Algorithms', grade: 78, maxPoints: 120, weight: 20 },
+      { name: 'Ground Vehicle Control Systems', grade: 85, maxPoints: 180, weight: 25 },
+      { name: 'UUV and USV Applications Assessment', grade: 80, maxPoints: 150, weight: 25 },
     ],
     trend: 'up',
-    semester: 'Spring 2024',
-  },
-  {
-    id: 3,
-    name: 'Web Development',
-    code: 'CS301',
-    instructor: 'Dr. Emily Brown',
-    grade: 78,
-    assignments: [
-      { name: 'HTML/CSS Project', grade: 85, maxPoints: 100, weight: 20 },
-      { name: 'JavaScript Assignment', grade: 75, maxPoints: 100, weight: 30 },
-      { name: 'Final Project', grade: 75, maxPoints: 100, weight: 50 },
-    ],
-    trend: 'down',
-    semester: 'Spring 2024',
+    semester: 'Spring 2025',
   },
 ];
 
@@ -111,8 +99,8 @@ function Grades() {
                 className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700"
               >
                 <option value="all">All Semesters</option>
-                <option value="Spring 2024">Spring 2024</option>
-                <option value="Fall 2023">Fall 2023</option>
+                <option value="Fall 2024">Fall 2024</option>
+                <option value="Spring 2025">Spring 2025</option>
               </select>
               <button className="flex items-center justify-center gap-2 px-4 py-2 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700">
                 <Filter size={20} />
@@ -126,8 +114,8 @@ function Grades() {
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-300">Overall GPA</p>
-                  <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">3.5</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">Skill Mastery Level</p>
+                  <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">87%</p>
                 </div>
                 <Award className="h-8 w-8 text-blue-500" />
               </div>
@@ -135,8 +123,8 @@ function Grades() {
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-300">Courses Completed</p>
-                  <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">12</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">Modules Completed</p>
+                  <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">28</p>
                 </div>
                 <BookOpen className="h-8 w-8 text-green-500" />
               </div>
@@ -144,8 +132,8 @@ function Grades() {
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-300">Current Courses</p>
-                  <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">5</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-300">Active Courses</p>
+                  <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">2</p>
                 </div>
                 <BarChart2 className="h-8 w-8 text-purple-500" />
               </div>
