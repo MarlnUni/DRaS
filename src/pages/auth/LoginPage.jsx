@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import userData from '../../data/user';
-import logo from '../../assets/marln-logo.png';
 import banner from '../../assets/banner.png';
+
+const logoUrl = "https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/Client-DRaS/dras-logo.jpg";
 
 const LoginPage = () => {
   const { login, logout } = useAuth();
@@ -38,16 +39,16 @@ const LoginPage = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
         <div className="relative z-10 flex flex-col justify-center h-full px-12">
-          <img src={logo} alt="MarLn Logo" className="w-32 mb-6" />
+          <img src={logoUrl} alt="DRaS Logo" className="w-32 mb-6" />
           <h1 className="text-white text-4xl font-bold leading-tight mb-4">
-            Welcome to <br /> MarLn 🚀
+            Welcome to <br /> DRaS 🚀
           </h1>
           <p className="text-blue-100 text-lg max-w-md">
             Your all-in-one solution for managing students, instructors, and university operations in one digital hub.
           </p>
         </div>
         <div className="text-sm text-blue-100 text-center p-4 relative z-10">
-          © {new Date().getFullYear()} MarLn. All rights reserved.
+          © {new Date().getFullYear()} DRaS. All rights reserved.
         </div>
       </div>
 
@@ -55,8 +56,8 @@ const LoginPage = () => {
       <div className="flex flex-1 justify-center items-center bg-gray-100 px-6 sm:px-12">
         <div className="w-full max-w-md bg-white shadow-2xl rounded-2xl p-8 space-y-6">
           <div className="text-center">
-            <img src={logo} alt="MarLn" className="mx-auto w-24 mb-4" />
-            <h2 className="text-2xl font-bold text-blue-700">Sign in to MarLn</h2>
+            <img src={logoUrl} alt="DRaS" className="mx-auto w-24 mb-4" />
+            <h2 className="text-2xl font-bold text-blue-700">Sign in to DRaS</h2>
             <p className="text-sm text-gray-500">Use your university credentials</p>
           </div>
 

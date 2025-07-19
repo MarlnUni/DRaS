@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--access-font-family, system-ui, Avenir, Helvetica, Arial, sans-serif);
+  font-size: var(--access-font-size, 16px);
+  background: var(--access-bg, #fff);
+  color: var(--access-color, #222);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,6 +14,11 @@
 body {
   margin: 0;
   min-height: 100vh;
+  font-family: var(--access-font-family, system-ui, Avenir, Helvetica, Arial, sans-serif);
+  font-size: var(--access-font-size, 16px);
+  background: var(--access-bg, #fff);
+  color: var(--access-color, #222);
+  padding-top: 32px;
   @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
 }
 

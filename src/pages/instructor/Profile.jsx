@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Sidebar from '../../components/Sidebar';
 import { UserCircle, Camera, Mail, Phone, Briefcase, Building2, Calendar, Globe, MapPin, Key, Linkedin, Github, Activity, CheckCircle, BarChart2 } from 'lucide-react';
 
@@ -29,6 +29,15 @@ export default function InstructorProfile() {
   const [pic, setPic] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [accessBarEnabled, setAccessBarEnabled] = useState(() => {
+    const stored = localStorage.getItem('access-bar-enabled');
+    return stored === null ? true : stored === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('access-bar-enabled', accessBarEnabled);
+    window.dispatchEvent(new Event('access-bar-toggle'));
+  }, [accessBarEnabled]);
 
   const handlePicChange = (e) => {
     const file = e.target.files[0];
@@ -97,6 +106,19 @@ export default function InstructorProfile() {
             <div className="w-full mt-6 flex flex-col gap-2">
               <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-700 dark:text-blue-400 hover:underline"><Linkedin size={18}/> LinkedIn</a>
               <a href={profile.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-800 dark:text-gray-100 hover:underline"><Github size={18}/> GitHub</a>
+            </div>
+            {/* Accessibility Bar Toggle */}
+            <div className="w-full mt-6 flex items-center gap-2">
+              <input
+                id="access-bar-toggle"
+                type="checkbox"
+                checked={accessBarEnabled}
+                onChange={e => setAccessBarEnabled(e.target.checked)}
+                className="mr-2"
+              />
+              <label htmlFor="access-bar-toggle" className="text-sm text-gray-700 dark:text-gray-200">
+                Show Accessibility Bar
+              </label>
             </div>
           </div>
 

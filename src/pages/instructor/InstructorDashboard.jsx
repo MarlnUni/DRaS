@@ -1,46 +1,70 @@
 import { useState } from 'react';
 import Sidebar from '../../components/Sidebar';
-import { BookOpen, Users2, ClipboardList, Calendar, BarChart2, MessageCircle, FileText, CheckCircle, TrendingUp, Bell, ArrowUpRight } from 'lucide-react';
+import { BookOpen, Users2, ClipboardList, Calendar, BarChart2, MessageCircle, FileText, CheckCircle, TrendingUp, Bell, ArrowUpRight, Shield, Target, Award, Clock, GraduationCap, Briefcase, Zap } from 'lucide-react';
 
 const stats = [
-  { label: 'My Courses', value: '6', icon: BookOpen, color: 'text-blue-600', bg: 'bg-blue-50' },
-  { label: 'Students Taught', value: '180', icon: Users2, color: 'text-green-600', bg: 'bg-green-50' },
-  { label: 'Assignments to Grade', value: '12', icon: ClipboardList, color: 'text-purple-600', bg: 'bg-purple-50' },
-  { label: 'Upcoming Classes', value: '3', icon: Calendar, color: 'text-yellow-600', bg: 'bg-yellow-50' },
+  { label: 'Active Courses', value: '2', icon: BookOpen, color: 'text-blue-600', bg: 'bg-blue-50' },
+  { label: 'Total Trainees', value: '77', icon: Users2, color: 'text-green-600', bg: 'bg-green-50' },
+  { label: 'Pending Assessments', value: '8', icon: ClipboardList, color: 'text-purple-600', bg: 'bg-purple-50' },
+  { label: 'Training Hours', value: '1,240', icon: Clock, color: 'text-yellow-600', bg: 'bg-yellow-50' },
 ];
 
 const messages = [
-  { name: 'Sarah Lee', time: '10:15 AM', msg: 'Could you clarify the project requirements?', avatar: '', color: 'bg-blue-200' },
-  { name: 'David Kim', time: 'Yesterday', msg: 'I will be absent next class.', avatar: '', color: 'bg-green-200' },
-  { name: 'Eva Green', time: '2 days ago', msg: 'Thank you for the feedback!', avatar: '', color: 'bg-yellow-200' },
+  { name: 'Alex Chen', time: '10:15 AM', msg: 'Need clarification on AI threat detection module', avatar: '', color: 'bg-blue-200' },
+  { name: 'Maria Rodriguez', time: 'Yesterday', msg: 'Completed UAV simulation exercise', avatar: '', color: 'bg-green-200' },
+  { name: 'James Wilson', time: '2 days ago', msg: 'Request for additional practical sessions', avatar: '', color: 'bg-yellow-200' },
 ];
 
 const activities = [
-  { icon: CheckCircle, desc: 'Graded Assignment 2 for CS101.', time: '5 min ago', color: 'text-blue-600' },
-  { icon: FileText, desc: 'Uploaded new lecture notes for ML305.', time: '30 min ago', color: 'text-green-600' },
-  { icon: BarChart2, desc: 'Reviewed attendance for Data Structures.', time: '1 hr ago', color: 'text-yellow-600' },
-  { icon: Users2, desc: 'Held office hours for students.', time: '3 hr ago', color: 'text-purple-600' },
+  { icon: CheckCircle, desc: 'Graded AI Defence Systems project submissions.', time: '5 min ago', color: 'text-blue-600' },
+  { icon: FileText, desc: 'Updated UAV system design guidelines.', time: '30 min ago', color: 'text-green-600' },
+  { icon: BarChart2, desc: 'Conducted practical assessment for autonomous navigation.', time: '1 hr ago', color: 'text-yellow-600' },
+  { icon: Users2, desc: 'Led hands-on training session for computer vision applications.', time: '3 hr ago', color: 'text-purple-600' },
 ];
 
 const noticeBoard = [
-  { title: 'Midterm Exam Schedule', desc: 'Midterms will be held next week. Check the calendar.', date: 'Oct 10, 2024', by: 'Academic Office', views: 210 },
-  { title: 'Faculty Meeting', desc: 'Monthly faculty meeting this Friday at 2 PM.', date: 'Oct 8, 2024', by: 'Dean Office', views: 98 },
-  { title: 'Course Material Update', desc: 'New resources added to the library.', date: 'Oct 5, 2024', by: 'Library', views: 120 },
+  { title: 'Defence Industry Certification', desc: 'Final certification exams scheduled for next month.', date: 'Oct 10, 2024', by: 'Training Director', views: 45 },
+  { title: 'Practical Assessment Week', desc: 'Hands-on assessments for both courses this week.', date: 'Oct 8, 2024', by: 'Training Coordinator', views: 38 },
+  { title: 'Industry Expert Guest Lecture', desc: 'Retired military officer to speak on real-world applications.', date: 'Oct 5, 2024', by: 'Program Manager', views: 42 },
 ];
 
-const coursePerformance = [60, 75, 80, 90, 85, 88, 92];
-const studentEngagement = [70, 80, 65, 90, 85, 78, 88];
+const courseProgress = [75, 82, 68, 90, 85, 78, 88];
+const skillDevelopment = [80, 85, 70, 92, 88, 82, 90];
 
 const quickAccess = [
-  { label: 'Gradebook', icon: BarChart2, color: 'bg-blue-100', href: '#' },
-  { label: 'Materials', icon: FileText, color: 'bg-green-100', href: '#' },
-  { label: 'Attendance', icon: ClipboardList, color: 'bg-yellow-100', href: '#' },
+  { label: 'Skill Assessment', icon: Target, color: 'bg-blue-100', href: '#' },
+  { label: 'Practical Modules', icon: Briefcase, color: 'bg-green-100', href: '#' },
+  { label: 'Industry Standards', icon: Shield, color: 'bg-yellow-100', href: '#' },
 ];
 
 const events = [
-  { time: '9:00 AM', title: 'CS101 Lecture', desc: 'Room 204, Main Building' },
-  { time: '11:00 AM', title: 'Office Hours', desc: 'Faculty Office 12' },
-  { time: '2:00 PM', title: 'ML305 Lab', desc: 'Lab 3, Science Block' },
+  { time: '9:00 AM', title: 'AI Defence Lab Session', desc: 'Practical AI threat detection training' },
+  { time: '11:00 AM', title: 'UAV Flight Simulation', desc: 'Autonomous platform control training' },
+  { time: '2:00 PM', title: 'Industry Standards Review', desc: 'Defence certification preparation' },
+];
+
+const vocationalMetrics = [
+  { label: 'Practical Skills Mastery', value: '87%', progress: 87, color: 'bg-green-500' },
+  { label: 'Industry Standards Compliance', value: '92%', progress: 92, color: 'bg-blue-500' },
+  { label: 'Hands-on Training Completion', value: '78%', progress: 78, color: 'bg-yellow-500' },
+  { label: 'Defence Certification Readiness', value: '85%', progress: 85, color: 'bg-purple-500' },
+];
+
+const courseOverview = [
+  {
+    name: 'AI401 - Artificial Intelligence for Defence Applications',
+    trainees: 42,
+    progress: 75,
+    nextAssessment: 'AI Threat Detection Practical',
+    status: 'active'
+  },
+  {
+    name: 'AP402 - Autonomous Platforms in Defence Applications',
+    trainees: 35,
+    progress: 68,
+    nextAssessment: 'UAV System Design Project',
+    status: 'active'
+  }
 ];
 
 export default function InstructorDashboard() {
@@ -51,6 +75,15 @@ export default function InstructorDashboard() {
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Main Content */}
           <div className="flex-1 flex flex-col gap-6">
+            {/* Header */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-lg p-6 text-white">
+              <div className="flex items-center gap-3 mb-2">
+                <Shield size={32} />
+                <h1 className="text-2xl font-bold">Defence Training Dashboard</h1>
+              </div>
+              <p className="text-blue-100">Vocational Training Program - 1 Year Duration</p>
+            </div>
+
             {/* Top Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {stats.map((stat) => (
@@ -64,15 +97,75 @@ export default function InstructorDashboard() {
               ))}
             </div>
 
+            {/* Course Overview */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
+              <div className="font-semibold text-gray-700 dark:text-gray-100 mb-4 flex items-center gap-2">
+                <BookOpen size={20} />
+                Course Overview
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {courseOverview.map((course, index) => (
+                  <div key={index} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="font-semibold text-gray-800 dark:text-gray-100 text-sm">{course.name}</h3>
+                      <span className={`px-2 py-1 rounded-full text-xs ${
+                        course.status === 'active' ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-300' : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
+                      }`}>
+                        {course.status}
+                      </span>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-gray-500 dark:text-gray-300">Trainees:</span>
+                        <span className="font-medium text-gray-800 dark:text-gray-100">{course.trainees}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-500 dark:text-gray-300">Progress:</span>
+                        <span className="font-medium text-gray-800 dark:text-gray-100">{course.progress}%</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-500 dark:text-gray-300">Next Assessment:</span>
+                        <span className="font-medium text-gray-800 dark:text-gray-100 text-xs">{course.nextAssessment}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Vocational Metrics */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
+              <div className="font-semibold text-gray-700 dark:text-gray-100 mb-4 flex items-center gap-2">
+                <Award size={20} />
+                Vocational Training Metrics
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {vocationalMetrics.map((metric, index) => (
+                  <div key={index} className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-100">{metric.label}</span>
+                      <span className="text-sm font-bold text-gray-800 dark:text-gray-100">{metric.value}</span>
+                    </div>
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                      <div 
+                        className={`h-2 rounded-full ${metric.color}`}
+                        style={{ width: `${metric.progress}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Charts Row */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Course Performance (Line Chart) */}
+              {/* Course Progress (Line Chart) */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <div className="font-semibold text-gray-700 dark:text-gray-100">Course Performance</div>
+                  <div className="font-semibold text-gray-700 dark:text-gray-100">Training Progress</div>
                   <select className="border rounded px-2 py-1 text-sm dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700">
-                    <option>Last 7 Classes</option>
-                    <option>Last Semester</option>
+                    <option>Last 7 Sessions</option>
+                    <option>This Month</option>
                   </select>
                 </div>
                 {/* Mock Line Chart */}
@@ -84,21 +177,21 @@ export default function InstructorDashboard() {
                     points="0,90 50,80 100,70 150,60 200,50 250,40 300,30"
                   />
                   <circle cx="300" cy="30" r="6" fill="#2563eb" />
-                  <text x="310" y="28" fontSize="12" fill="#2563eb">92%</text>
+                  <text x="310" y="28" fontSize="12" fill="#2563eb">88%</text>
                 </svg>
               </div>
-              {/* Student Engagement (Bar Chart) */}
+              {/* Skill Development (Bar Chart) */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <div className="font-semibold text-gray-700 dark:text-gray-100">Student Engagement</div>
+                  <div className="font-semibold text-gray-700 dark:text-gray-100">Skill Development</div>
                   <select className="border rounded px-2 py-1 text-sm dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700">
-                    <option>Last 7 Classes</option>
-                    <option>Last Semester</option>
+                    <option>Last 7 Sessions</option>
+                    <option>This Month</option>
                   </select>
                 </div>
                 {/* Mock Bar Chart */}
                 <svg viewBox="0 0 320 100" className="w-full h-28">
-                  {studentEngagement.map((val, i) => (
+                  {skillDevelopment.map((val, i) => (
                     <rect key={i} x={20 + i * 40} y={100 - val} width="24" height={val} fill="#22c55e" />
                   ))}
                 </svg>
@@ -109,7 +202,7 @@ export default function InstructorDashboard() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Messages */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col">
-                <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><MessageCircle size={18}/> Student Messages</div>
+                <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><MessageCircle size={18}/> Trainee Messages</div>
                 <div className="flex-1 flex flex-col gap-3">
                   {messages.map((msg, i) => (
                     <div key={i} className="flex items-start gap-3">
@@ -139,12 +232,12 @@ export default function InstructorDashboard() {
               </div>
               {/* Upcoming Events */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col">
-                <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><Calendar size={18}/> Upcoming Events</div>
+                <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><Calendar size={18}/> Training Schedule</div>
                 <div className="flex flex-col gap-3">
                   {events.map((e, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                        <Calendar size={22} className="text-blue-600" />
+                        <Zap size={22} className="text-blue-600" />
                       </div>
                       <div className="flex-1">
                         <div className="font-semibold text-gray-800 text-sm">{e.title}</div>
@@ -159,7 +252,7 @@ export default function InstructorDashboard() {
 
             {/* Notice Board */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
-              <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><Bell size={18}/> Notice Board</div>
+              <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><Bell size={18}/> Training Notices</div>
               <div className="overflow-x-auto">
                 <table className="min-w-full text-sm">
                   <thead>
@@ -186,7 +279,7 @@ export default function InstructorDashboard() {
 
             {/* Recent Activity */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6">
-              <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><TrendingUp size={18}/> Recent Activity</div>
+              <div className="font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center gap-2"><TrendingUp size={18}/> Training Activities</div>
               <div className="flex flex-col gap-3">
                 {activities.map((a, i) => (
                   <div key={i} className="flex items-center gap-3">
