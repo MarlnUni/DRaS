@@ -110,6 +110,7 @@ function App() {
                 <Route path="/student/messages" element={<StudentMessages />} />
                 <Route path="/student/notifications" element={<StudentNotifications />} />
                 <Route path="/student/ecollab" element={<Ecollab />} />
+                <Route path="/student/courses/:courseId/pdf/syllabus" element={<CoursePdfViewer />} />
                 <Route path="/student/courses/:courseId/pdf/:week" element={<CoursePdfViewer />} />
                 <Route path="/student/courses/:courseId/video/:week" element={<CourseVideoViewer />} />
               </Route>

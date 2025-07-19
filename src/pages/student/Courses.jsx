@@ -30,216 +30,216 @@ const courses = [
 
 const courseContents = {
   'AI401 - Artificial Intelligence for Defence Applications': {
-    syllabus: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-syllabus.pdf',
+    syllabus: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
     weeks: [
       {
         week: 1,
         title: 'AI Introduction & Market for Defence Applications',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk1-ai-intro.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk1-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 2,
         title: 'AI Applications for Cybersecurity',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk2-cybersecurity.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk2-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 3,
         title: 'AI Logistics and Smart SCM',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk3-logistics.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk3-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 4,
         title: 'AI in Transportation',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk4-transportation.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk4-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 5,
         title: 'Target Recognition and Monitoring using AI tools',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk5-target-recognition.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk5-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 6,
         title: 'Threat Assessment',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk6-threat-assessment.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk6-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 7,
         title: 'AI for Situational Awareness',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk7-situational-awareness.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk7-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 8,
         title: 'AI aided Battlefield Healthcare',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk8-battlefield-healthcare.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk8-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 9,
         title: 'Planning artillery barrages for attack',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk9-artillery-planning.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk9-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 10,
         title: 'Fusion of data and sensor feeds',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk10-data-fusion.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk10-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 11,
         title: 'Intelligent support to command decision-making',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk11-command-support.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk11-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 12,
         title: 'AI assisted war gaming simulation and training',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk12-wargaming.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk12-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 13,
         title: 'Autonomous Air defence and missile shields',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk13-air-defence.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk13-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 14,
         title: 'Autonomous Mobile Warfare Platforms',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk14-mobile-warfare.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk14-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 15,
         title: 'Autonomous Warfare Systems',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk15-autonomous-warfare.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk15-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 16,
         title: 'AI in Military satellites',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk16-military-satellites.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk16-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 17,
         title: 'Generative AI for Military Systems',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk17-generative-ai.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk17-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 18,
         title: 'AI deployment and implementation',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk18-deployment.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ai401/ai401-wk18-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
     ],
   },
   'AP402 - Autonomous Platforms in Defence Applications': {
-    syllabus: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-syllabus.pdf',
+    syllabus: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
     weeks: [
       {
         week: 1,
         title: 'Unmanned Underwater Vessels (UUVs)',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk1-uuvs.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk1-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 2,
         title: 'Unmanned Surface Vessels (USVs)',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk2-usvs.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk2-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 3,
         title: 'UUV and USV Applications',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk3-uuv-usv-applications.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk3-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 4,
         title: 'Autonomous Under Water Weapons Systems',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk4-underwater-weapons.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk4-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 5,
         title: 'Unmanned Ground Vehicles (UGVs)',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk5-ugvs.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk5-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 6,
         title: 'UGV Applications',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk6-ugv-applications.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk6-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 7,
         title: 'Aerial Drone/UAV Classifications',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk7-uav-classifications.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk7-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 8,
         title: 'Civil Vs Military Drones',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk8-civil-military-drones.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk8-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 9,
         title: 'Military Applications of Aerial Drones',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk9-military-drone-applications.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk9-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 10,
         title: 'Types of Military Drones',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk10-military-drone-types.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk10-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 11,
         title: 'Layout of military drones /subsystems/drone components',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk11-drone-components.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk11-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 12,
         title: 'UAV Military Applications',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk12-uav-military-applications.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk12-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 13,
         title: 'Advanced Features of Drones/Unmanned Combat Aerial Vehicles (UCAV)',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk13-advanced-drone-features.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk13-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 14,
         title: 'Anti Drone Systems',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk14-anti-drone-systems.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk14-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 15,
         title: 'Swarm technologies for UAV/USV/UUVs',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk15-swarm-technologies.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk15-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
       {
         week: 16,
         title: 'Stealth UAV/UUVs/USVs',
-        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk16-stealth-platforms.pdf',
-        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/ap402/ap402-wk16-video.mp4',
+        pdf: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-0001.pdf',
+        video: 'https://lms-frontend-resources.s3.ap-south-1.amazonaws.com/CourseDetails/course1/course1-wk1-vid0001.mp4',
       },
     ],
   },
@@ -388,13 +388,15 @@ function Courses() {
                     <div className="space-y-4">
                       {courseContents[selectedCourse.title].weeks.map((week) => (
                         <div key={week.week} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                          <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-3">Week {week.week}</h4>
+                          <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-3">
+                            Week {week.week}: {week.title}
+                          </h4>
                           <div className="flex flex-wrap gap-2">
                             <button
                               onClick={() => navigate(`/student/courses/${selectedCourse.id}/pdf/${week.week}`, {
                                 state: {
                                   pdfUrl: week.pdf + '?v=' + Date.now(),
-                                  title: `${selectedCourse.title} - Week ${week.week} Materials`
+                                  title: `${selectedCourse.title} - Week ${week.week}: ${week.title}`
                                 }
                               })}
                               className="inline-flex items-center px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-gray-600"
@@ -406,7 +408,7 @@ function Courses() {
                               onClick={() => navigate(`/student/courses/${selectedCourse.id}/video/${week.week}`, {
                                 state: {
                                   videoUrl: week.video + '?v=' + Date.now(),
-                                  title: `${selectedCourse.title} - Week ${week.week} Lecture`
+                                  title: `${selectedCourse.title} - Week ${week.week}: ${week.title}`
                                 }
                               })}
                               className="inline-flex items-center px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-gray-600"
